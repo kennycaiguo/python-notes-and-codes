@@ -1,36 +1,31 @@
-1. 多个字符串组合为一个字符串
+# 1. 多个字符串组合为一个字符串
 list_of_strings = ['My', 'name', 'is', 'Dragon']
- 
-# Using join with the comma separator
 print(' '.join(list_of_strings))
  
-# Output
-# My name is Dragon
+### Output
+### My name is Dragon
 
-2. 字符串拆分为子字符串列表
+#2. 字符串拆分为子字符串列表
 string_1 = "My name is Dragon"
 string_2 = "sample/ string 2"
  
-# default separator ' '
 print(string_1.split())
-# ['My', 'name', 'is', 'Dragon']
+##### ['My', 'name', 'is', 'Dragon']
  
-# defining separator as '/'
 print(string_2.split('/'))
-# ['sample', ' string 2']
+##### ['sample', ' string 2']
 
-3. 统计列表中元素的次数
-# finding frequency of each element in a list
+#3. 统计列表中元素的次数
 from collections import Counter
  
 my_list = ['a','a','b','b','b','c','d','d','d','d','d']
 count = Counter(my_list) # defining a counter object
  
 print(count) # Of all elements
-# Counter({'d': 5, 'b': 3, 'a': 2, 'c': 1})
+##### Counter({'d': 5, 'b': 3, 'a': 2, 'c': 1})
  
-print(count['b']) # of individual element
-# 3
+print(count['b']) ##### of individual element
+##### 3
  
 print(count.most_common(1)) # most frequent element
 # [('d', 5)]
