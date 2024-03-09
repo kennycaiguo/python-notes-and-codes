@@ -1,0 +1,162 @@
+1. 多个字符串组合为一个字符串
+list_of_strings = ['My', 'name', 'is', 'Dragon']
+ 
+# Using join with the comma separator
+print(' '.join(list_of_strings))
+ 
+# Output
+# My name is Dragon
+
+2. 字符串拆分为子字符串列表
+string_1 = "My name is Dragon"
+string_2 = "sample/ string 2"
+ 
+# default separator ' '
+print(string_1.split())
+# ['My', 'name', 'is', 'Dragon']
+ 
+# defining separator as '/'
+print(string_2.split('/'))
+# ['sample', ' string 2']
+
+3. 统计列表中元素的次数
+# finding frequency of each element in a list
+from collections import Counter
+ 
+my_list = ['a','a','b','b','b','c','d','d','d','d','d']
+count = Counter(my_list) # defining a counter object
+ 
+print(count) # Of all elements
+# Counter({'d': 5, 'b': 3, 'a': 2, 'c': 1})
+ 
+print(count['b']) # of individual element
+# 3
+ 
+print(count.most_common(1)) # most frequent element
+# [('d', 5)]
+
+4. 使用try-except-else-block模块
+
+a, b = 1,0
+ 
+try:
+    print(a/b)
+    # exception raised when b is 0
+except ZeroDivisionError:
+    print("division by zero")
+else:
+    print("no exceptions raised")
+finally:
+    print("Run this always")
+ 
+# output
+# division by zero
+# Run this always
+
+5. 使用枚举函数得到key/value对
+
+my_list = ['a', 'b', 'c', 'd', 'e']
+ 
+for index, value in enumerate(my_list):
+    print('{0}: {1}'.format(index, value))
+ 
+# 0: a
+# 1: b
+# 2: c
+# 3: d
+# 4: e
+
+6. 检查对象的内存使用情况
+
+import sys
+num = 21
+print(sys.getsizeof(num))
+# In Python 3, 28
+
+7. 合并字典
+
+dict_1 = {'apple': 9, 'banana': 6}
+dict_2 = {'banana': 4, 'orange': 8}
+ 
+combined_dict = {**dict_1, **dict_2}
+ 
+print(combined_dict)
+# Output
+# {'apple': 9, 'banana': 4, 'orange': 8}
+
+8. 计算执行一段代码所花费的时间
+
+import time
+ 
+start_time = time.time()
+# Code to check follows
+for i in range(10**5):
+    a, b = 1,2
+    c = a+ b
+# Code to check ends
+end_time = time.time()
+time_taken_in_micro = (end_time- start_time)*(10**6)
+ 
+print(time_taken_in_micro)
+ 
+# output
+# 28770.217895507812
+
+9. 列表展开
+
+from iteration_utilities import deepflatten
+ 
+# if you only have one depth nested_list, use this
+def flatten(l):
+  return [item for sublist in l for item in sublist]
+ 
+l = [[1,2,3],[3]]
+print(flatten(l))
+# [1, 2, 3, 3]
+ 
+# if you don't know how deep the list is nested
+l = [[1,2,3],[4,[5],[6,7]],[8,[9,[10]]]]
+ 
+print(list(deepflatten(l, depth=3)))
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+10. 列表采样
+
+import random
+ 
+my_list = ['a', 'b', 'c', 'd', 'e']
+num_samples = 2
+ 
+samples = random.sample(my_list,num_samples)
+print(samples)
+# [ 'a', 'e'] this will have any 2 random values
+
+11. 数字化
+
+num = 123456
+ 
+# using map
+list_of_digits = list(map(int, str(num)))
+ 
+print(list_of_digits)
+# [1, 2, 3, 4, 5, 6]
+ 
+# using list comprehension
+list_of_digits = [int(x) for x in str(num)]
+ 
+print(list_of_digits)
+# [1, 2, 3, 4, 5, 6]
+
+12. 检查列表元素的唯一性
+
+def unique(l):
+    if len(l)==len(set(l)):
+        print("All elements are unique")
+    else:
+        print("List has duplicates")
+ 
+unique([1,2,3,4])
+# All elements are unique
+ 
+unique([1,1,2,3])
+# List has duplicates
