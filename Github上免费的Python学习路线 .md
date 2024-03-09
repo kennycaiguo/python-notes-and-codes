@@ -80,7 +80,7 @@ http://jobbole.github.io/awesome-python-cn/  <br/>
 7. Python 精选案例：收集了将近 400 个开源 Python 应用程序。
 https://github.com/mahmoud/awesome-python-applications <br/>
 
-8.经典面试题
+8.经典面试题<br/>
 https://github.com/StBogdan/CTCI_python <br/>
 https://github.com/sigmavirus24/python-interview-questions <br/>
 https://github.com/learning-zone/python-basics <br/>
