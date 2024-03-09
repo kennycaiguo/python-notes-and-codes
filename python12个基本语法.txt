@@ -97,7 +97,7 @@ print(time_taken_in_micro)
 # output
 # 28770.217895507812
 
-9. 列表展开
+9. 列表展开，需要安装一个第三方库 pip install iteration_utilities
 
 from iteration_utilities import deepflatten
  
