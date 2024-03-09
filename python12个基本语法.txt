@@ -1,5 +1,5 @@
 # 1. 多个字符串组合为一个字符串
-list_of_strings = ['My', 'name', 'is', 'Dragon']
+list_of_strings = ['My', 'name', 'is', 'Dragon'] <br/>
 print(' '.join(list_of_strings))
  
 ### Output
