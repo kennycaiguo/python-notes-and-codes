@@ -110,7 +110,7 @@ print(list(deepflatten(l, depth=3)))
  #其实不用这个库，自己写一个递归函数来实现也行
 def recursiveFlatten(lst,rst=[]):
     for sub in lst:
-        if(isinstance(sub,list) ): # 如果列表的以上也是一个列表
+        if(isinstance(sub,list) ): # 如果列表的项也是一个列表，就需要递归调用自己
             recursiveFlatten(sub,rst)
         else:
             rst.append(sub) # 如果是元素就直接添加到结果列表
