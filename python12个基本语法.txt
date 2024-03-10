@@ -100,20 +100,30 @@ print(time_taken_in_micro)
 9. 列表展开，需要安装一个第三方库 pip install iteration_utilities
 
 from iteration_utilities import deepflatten
- 
-# if you only have one depth nested_list, use this
-def flatten(l):
-  return [item for sublist in l for item in sublist]
- 
-l = [[1,2,3],[3]]
-print(flatten(l))
-# [1, 2, 3, 3]
- 
+  
 # if you don't know how deep the list is nested
 l = [[1,2,3],[4,[5],[6,7]],[8,[9,[10]]]]
  
 print(list(deepflatten(l, depth=3)))
 # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+ #其实不用这个库，自己写一个递归函数来实现也行
+def recursiveFlatten(lst,rst=[]):
+    for sub in lst:
+        if(isinstance(sub,list) ): # 如果列表的以上也是一个列表
+            recursiveFlatten(sub,rst)
+        else:
+            rst.append(sub) # 如果是元素就直接添加到结果列表
+    return rst
+
+# print(recursiveFlatten(l)) # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+l2 = [[10,9,8],[7,[6],[5,4]],[3,[2,[1]]]] # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+# print(recursiveFlatten(l2)) #
+
+l3 = [[1,2,3],[3]]
+print(recursiveFlatten(l3)) #[1, 2, 3, 3]
+
 
 10. 列表采样
 
