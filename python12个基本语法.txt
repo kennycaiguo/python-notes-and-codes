@@ -118,8 +118,8 @@ def recursiveFlatten(lst,rst=[]):
 
 # print(recursiveFlatten(l)) # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-l2 = [[10,9,8],[7,[6],[5,4]],[3,[2,[1]]]] # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-# print(recursiveFlatten(l2)) #
+l2 = [[10,9,8],[7,[6],[5,4]],[3,[2,[1]]]]
+# print(recursiveFlatten(l2))  # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 l3 = [[1,2,3],[3]]
 print(recursiveFlatten(l3)) #[1, 2, 3, 3]
